@@ -1,6 +1,6 @@
 import streamlit as st
 
-option = st.sidebar.radio(options=["home", "speed_recontre", "chat"], label="choisissez votre mode !")
+option = st.sidebar.radio(options=["home", "speed_rencontre", "chat"], label="choisissez votre mode !")
 
 if option == "home":
     style="""{
