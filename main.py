@@ -32,6 +32,7 @@ elif option == "speed_rencontre":
                         """)
         st.write("""**description**:
                  je suis une petite chatte trés mignone qui ne demande que de l'amours""")
+        st.button("passer au speed rencontre")
         
     except Exception:
         st.session_state["first"] = "no"
