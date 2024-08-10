@@ -45,3 +45,26 @@ elif option == "speed_rencontre":
                     Nous basons nos recommandations sur les 50 derniers profils que vous avez consultés. Cependant, en souscrivant à notre forfait premium à seulement 0,50 € par mois, vous pourrez doubler le nombre de profils pris en compte. En plus, ce forfait vous donne accès à un algorithme de recommandation amélioré (et qui sait, peut-être bientôt basé sur l'IA 😉).
                     """)
         st.button("passer au speed rencontre")
+    
+elif option == "chat":
+    # Initialisation de la session pour stocker l'historique des messages
+    if 'messages' not in st.session_state:
+        st.session_state['messages'] = []
+    
+    # Fonction pour ajouter un nouveau message
+    def add_message():
+        if st.session_state['user_input']:
+            st.session_state['messages'].append({"user": "Vous", "text": st.session_state['user_input']})
+            st.session_state['user_input'] = ''  # Réinitialiser l'entrée utilisateur
+    
+    # Titre de l'application
+    st.title("Système de Chat Simple")
+    
+    # Afficher l'historique des messages
+    st.subheader("Historique des messages")
+    for msg in st.session_state['messages']:
+        st.write(f"{msg['user']}: {msg['text']}")
+    
+    # Entrée utilisateur
+    st.text_input("Tapez votre message ici:", key='user_input', on_change=add_message)
+    
