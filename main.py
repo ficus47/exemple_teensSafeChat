@@ -56,6 +56,8 @@ elif option == "chat":
         if st.session_state['user_input']:
             st.session_state['messages'].append({"user": "Vous", "text": st.session_state['user_input']})
             st.session_state['user_input'] = ''  # Réinitialiser l'entrée utilisateur
+            if len(st.session_state['messages']) > 50:
+                st.session_state['messages'] = st.session_state['messages'][-50:]
 
     # Titre de l'application
     st.title("Système de Chat Simple")
@@ -67,5 +69,3 @@ elif option == "chat":
 
     # Entrée utilisateur
     st.text_input("Tapez votre message ici:", key='user_input', on_change=add_message)
-
-    st.session_state['messages'] = st.session_state['messages'][-3 if len(st.session_state['messages']) > 3 else 0:-1]
