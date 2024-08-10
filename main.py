@@ -3,7 +3,7 @@ import streamlit as st
 option = st.sidebar.radio(options=["home", "speed_rencontre", "chat"], label="choisissez votre mode !")
 
 if option == "home":
-    st.write("""Bienvenue sur TeenSafeChat, votre site de rencontres sécurisé pour adolescents, protégé par l'IA !\n
+    st.write("""**Bienvenue sur TeenSafeChat, votre site de rencontres sécurisé pour adolescents, protégé par l'IA !**\n
 
                                 La sécurité de nos utilisateurs et la protection de leurs données sont nos priorités absolues. C'est pourquoi nous avons développé AImage, notre IA avancée capable de vérifier l'âge des utilisateurs à partir d'une simple photo. De plus, nous travaillons activement sur une IA dédiée à la modération des discussions et des profils, pour garantir un environnement sûr et respectueux.
                                 
