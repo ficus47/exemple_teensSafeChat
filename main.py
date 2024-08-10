@@ -3,19 +3,13 @@ import streamlit as st
 option = st.sidebar.radio(options=["home", "speed_rencontre", "chat"], label="choisissez votre mode !")
 
 if option == "home":
-    style="""{
-    height : 300px;
-    color : blue
-    
-    }"""
+    st.write("""Bienvenue sur TeenSafeChat, votre site de rencontres sécurisé pour adolescents, protégé par l'IA !\n
 
-    st.html(f"""<h3 style={style}>{"Bienvenue sur TeenSafeChat, votre site de rencontres sécurisé pour adolescents, protégé par l'IA !\n"}\n
-
-                                {"La sécurité de nos utilisateurs et la protection de leurs données sont nos priorités absolues. C'est pourquoi nous avons développé AImage, notre IA avancée capable de vérifier l'âge des utilisateurs à partir d'une simple photo. De plus, nous travaillons activement sur une IA dédiée à la modération des discussions et des profils, pour garantir un environnement sûr et respectueux."}\n  
+                                La sécurité de nos utilisateurs et la protection de leurs données sont nos priorités absolues. C'est pourquoi nous avons développé AImage, notre IA avancée capable de vérifier l'âge des utilisateurs à partir d'une simple photo. De plus, nous travaillons activement sur une IA dédiée à la modération des discussions et des profils, pour garantir un environnement sûr et respectueux.
                                 
-                                {"Nous vous souhaitons une expérience agréable et de belles rencontres !\n"}\n
+                                Nous vous souhaitons une expérience agréable et de belles rencontres !\n
                                 
-                                {"Pour toute réclamation, question ou demande d'assistance, n'hésitez pas à nous contacter à l'adresse suivante : [email à venir].\n"}\n</h3>""")
+                                Pour toute réclamation, question ou demande d'assistance, n'hésitez pas à nous contacter à l'adresse suivante : [email à venir].\n""")
 
 elif option == "speed_rencontre":
     try:
