@@ -19,19 +19,8 @@ if option == "home":
 
 elif option == "speed_rencontre":
     try:
-        if st.session_state["first"] == "yes":
-            st.session_state["first"] = "no"
-            st.balloons()
-
-            st.write("""**Bienvenue sur la section Speed-Date de TeenSafeChat !**
-                        Dans cette section, vous pourrez découvrir des profils qui vous seront proposés en fonction de vos informations (âge, orientation sexuelle, etc.). Vous aurez la possibilité de les contacter ou simplement de passer au profil suivant !                       
-
-                        Pour vous offrir une meilleure expérience, nous utilisons votre historique de navigation. Ne vous inquiétez pas, ces informations ne seront utilisées que pour améliorer les suggestions qui vous seront faites.                        
-
-                        Nous basons nos recommandations sur les 50 derniers profils que vous avez consultés. Cependant, en souscrivant à notre forfait premium à seulement 0,50 € par mois, vous pourrez doubler le nombre de profils pris en compte. En plus, ce forfait vous donne accès à un algorithme de recommandation amélioré (et qui sait, peut-être bientôt basé sur l'IA 😉).
-                        """)
-    except Exception:
-        column1, column2 = st.columns([2,1])
+        if st.session_state["first"] != "yes":
+            column1, column2 = st.columns([2,1])
 
 
         column1.image("images.jpg")
@@ -43,3 +32,14 @@ elif option == "speed_rencontre":
                         """)
         st.write("""**description**:
                  je suis une petite chatte trés mignone qui ne demande que de l'amours""")
+        
+    except Exception:
+        st.session_state["first"] = "no"
+
+        st.balloons()
+        
+        st.write("""**Bienvenue sur la section Speed-Date de TeenSafeChat !**
+                    Dans cette section, vous pourrez découvrir des profils qui vous seront proposés en fonction de vos informations (âge, orientation sexuelle, etc.). Vous aurez la possibilité de les contacter ou simplement de passer au profil suivant !                       
+                    Pour vous offrir une meilleure expérience, nous utilisons votre historique de navigation. Ne vous inquiétez pas, ces informations ne seront utilisées que pour améliorer les suggestions qui vous seront faites.                        
+                    Nous basons nos recommandations sur les 50 derniers profils que vous avez consultés. Cependant, en souscrivant à notre forfait premium à seulement 0,50 € par mois, vous pourrez doubler le nombre de profils pris en compte. En plus, ce forfait vous donne accès à un algorithme de recommandation amélioré (et qui sait, peut-être bientôt basé sur l'IA 😉).
+                    """)
