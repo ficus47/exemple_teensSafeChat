@@ -2,4 +2,4 @@ import streamlit as st
 
 st.write("teenSafeChat")
 
-option = st.sidebar.selectbox(["home", "speed_recontre", "chat"])
+option = st.sidebar.selectbox(options=["home", "speed_recontre", "chat"])
