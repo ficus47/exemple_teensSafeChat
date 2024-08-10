@@ -25,10 +25,10 @@ elif option == "speed_rencontre":
 
         column1.image("images.jpg")
         column2.write("""
-                        sex : feminin
-                        age : 8 mois
-                        autre : trop chou
-                        orientation sexuel : aime tout le monde
+                        sex : feminin\n
+                        age : 8 mois\n
+                        autre : trop chou\n
+                        orientation sexuel : aime tout le monde\n
                         """)
         st.write("""**description**:
                  je suis une petite chatte trés mignone qui ne demande que de l'amours""")
