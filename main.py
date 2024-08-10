@@ -9,13 +9,13 @@ if option == "home":
     
     }"""
 
-    st.html(f"<h3 style={style}>{"""Bienvenue sur TeenSafeChat, votre site de rencontres sécurisé pour adolescents, protégé par l'IA !
+    st.html(f"<h3 style={style}>{"""Bienvenue sur TeenSafeChat, votre site de rencontres sécurisé pour adolescents, protégé par l'IA !\n
 
                                 La sécurité de nos utilisateurs et la protection de leurs données sont nos priorités absolues. C'est pourquoi nous avons développé AImage, notre IA avancée capable de vérifier l'âge des utilisateurs à partir d'une simple photo. De plus, nous travaillons activement sur une IA dédiée à la modération des discussions et des profils, pour garantir un environnement sûr et respectueux.
                                 
-                                Nous vous souhaitons une expérience agréable et de belles rencontres !
+                                Nous vous souhaitons une expérience agréable et de belles rencontres !\n
                                 
-                                Pour toute réclamation, question ou demande d'assistance, n'hésitez pas à nous contacter à l'adresse suivante : [email à venir]."""}</h3>")
+                                Pour toute réclamation, question ou demande d'assistance, n'hésitez pas à nous contacter à l'adresse suivante : [email à venir].\n"""}</h3>")
 
 elif option == "speed_rencontre":
     try:
@@ -41,7 +41,7 @@ elif option == "speed_rencontre":
         
         st.write("""**Bienvenue sur la section Speed-Date de TeenSafeChat !**\n
                  
-                    Dans cette section, vous pourrez découvrir des profils qui vous seront proposés en fonction de vos informations (âge, orientation sexuelle, etc.). Vous aurez la possibilité de les contacter ou simplement de passer au profil suivant !                       
+                    Dans cette section, vous pourrez découvrir des profils qui vous seront proposés en fonction de vos informations (âge, orientation sexuelle, etc.). Vous aurez la possibilité de les contacter ou simplement de passer au profil suivant !\n                       
                     
                     Pour vous offrir une meilleure expérience, nous utilisons votre historique de navigation. Ne vous inquiétez pas, ces informations ne seront utilisées que pour améliorer les suggestions qui vous seront faites.\n                        
                     
