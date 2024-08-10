@@ -1,7 +1,8 @@
 import streamlit as st
 
 style="""{
-    height:300px
+    height : 300px,
+    color : blue
     
 }"""
 
