@@ -50,21 +50,22 @@ elif option == "chat":
     # Initialisation de la session pour stocker l'historique des messages
     if 'messages' not in st.session_state:
         st.session_state['messages'] = []
-    
+
     # Fonction pour ajouter un nouveau message
     def add_message():
         if st.session_state['user_input']:
             st.session_state['messages'].append({"user": "Vous", "text": st.session_state['user_input']})
             st.session_state['user_input'] = ''  # Réinitialiser l'entrée utilisateur
-    
+
     # Titre de l'application
     st.title("Système de Chat Simple")
-    
+
     # Afficher l'historique des messages
     st.subheader("Historique des messages")
     for msg in st.session_state['messages']:
         st.write(f"{msg['user']}: {msg['text']}")
-    
+
     # Entrée utilisateur
     st.text_input("Tapez votre message ici:", key='user_input', on_change=add_message)
-    
+
+    st.session_state['messages'] = st.session_state['messages'][-50 if len(st.session_state['messages']) > 50 else 0:-1]
