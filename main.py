@@ -68,4 +68,4 @@ elif option == "chat":
     # Entrée utilisateur
     st.text_input("Tapez votre message ici:", key='user_input', on_change=add_message)
 
-    st.session_state['messages'] = st.session_state['messages'][-50 if len(st.session_state['messages']) > 50 else 0:-1]
+    st.session_state['messages'] = st.session_state['messages'][-3 if len(st.session_state['messages']) > 3 else 0:-1]
