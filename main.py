@@ -32,7 +32,7 @@ elif option == "speed_rencontre":
                         """)
         st.write("""**description**:
                  je suis une petite chatte trés mignone qui ne demande que de l'amours""")
-        st.button("passer au speed rencontre")
+        
         
     except Exception:
         st.session_state["first"] = "no"
@@ -44,3 +44,4 @@ elif option == "speed_rencontre":
                     Pour vous offrir une meilleure expérience, nous utilisons votre historique de navigation. Ne vous inquiétez pas, ces informations ne seront utilisées que pour améliorer les suggestions qui vous seront faites.                        
                     Nous basons nos recommandations sur les 50 derniers profils que vous avez consultés. Cependant, en souscrivant à notre forfait premium à seulement 0,50 € par mois, vous pourrez doubler le nombre de profils pris en compte. En plus, ce forfait vous donne accès à un algorithme de recommandation amélioré (et qui sait, peut-être bientôt basé sur l'IA 😉).
                     """)
+        st.button("passer au speed rencontre")
