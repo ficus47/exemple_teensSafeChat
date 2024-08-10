@@ -31,4 +31,15 @@ elif option == "speed_rencontre":
                         Nous basons nos recommandations sur les 50 derniers profils que vous avez consultés. Cependant, en souscrivant à notre forfait premium à seulement 0,50 € par mois, vous pourrez doubler le nombre de profils pris en compte. En plus, ce forfait vous donne accès à un algorithme de recommandation amélioré (et qui sait, peut-être bientôt basé sur l'IA 😉).
                         """)
     except Exception:
-        st.image("images.jpg")
+        column1, column2 = st.columns([2,1])
+
+
+        column1.image("images.jpg")
+        column2.write("""
+                        sex : feminin
+                        age : 8 mois
+                        autre : trop chou
+                        orientation sexuel : aime tout le monde
+                        """)
+        st.write("""**description**:
+                 je suis une petite chatte trés mignone qui ne demande que de l'amours""")
